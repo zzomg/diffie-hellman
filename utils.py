@@ -5,7 +5,7 @@ from math import sqrt
 from functools import lru_cache
 
 UPPER_BOUND = 500
-LOWER_BOUND = 700  # let's consider not too big for the sake of our experiment
+LOWER_BOUND = 700  # let's consider bounds that are not too big for the sake of our experiment
 
 
 # @lru_cache(maxsize=None)
