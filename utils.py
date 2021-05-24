@@ -8,16 +8,6 @@ UPPER_BOUND = 500
 LOWER_BOUND = 700  # let's consider bounds that are not too big for the sake of our experiment
 
 
-# @lru_cache(maxsize=None)
-# def bin_pow(x, pow):  # O(log pow)
-#     if pow == 0:
-#         return 1
-#     if pow % 2 == 1:
-#         return bin_pow(x, pow - 1) * x
-#     else:
-#         res = bin_pow(x, pow / 2)
-#         return res * res
-
 def bin_pow(x, pow, modulo):
     number = 1
     while pow:
@@ -43,7 +33,7 @@ def gcd(a, b):
     return a
 
 
-def primitive_root(p):  # O(p^2)
+def primitive_root(p):  
     required_set = {num for num in range(1, p) if gcd(num, p)}
     prim_roots = [g for g in range(1, p) if required_set == {bin_pow(g, powers, p) for powers in range(1, p)}]
     g = random.choice(prim_roots)
