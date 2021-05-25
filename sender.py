@@ -10,7 +10,7 @@ class Sender:
         self.__private_key = random.randint(LOWER_BOUND, UPPER_BOUND)
         self.__full_key = None
 
-    def generate_partial_private_key(self):
+    def generate_partial_public_key(self):
         return bin_pow(self.g, self.__private_key, self.p)
 
     def generate_full_private_key(self, partial_key):
