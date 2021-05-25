@@ -5,9 +5,6 @@ Simple implementation for Diffie-Hellman cryptosystem
 from utils import generate_public_keys
 from sender import Sender
 
-UPPER_BOUND = 500
-LOWER_BOUND = 700 
-
 
 def cryptosystem():
     p, g = generate_public_keys()
